@@ -1,16 +1,15 @@
-package com.jemutai.globalgist
+package com.jemutai.globalgist.util
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import com.jemutai.globalgist.R
 
-class MainActivity : AppCompatActivity() {
+class GlobalGist : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.global_gist)
 
     }
 }
