@@ -6,8 +6,24 @@
     tools:context=".fragments.FavouriteFragment">
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favourites"
+        android:textColor="@color/pink"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavourites"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="8dp"
+        />
+
+
+
 
 </FrameLayout>
