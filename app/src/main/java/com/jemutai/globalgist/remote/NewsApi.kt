@@ -18,6 +18,7 @@ interface NewsApi {
 
 @GET("/v2/everything")
      suspend fun  serachNews(
-         @Query("")
-     )
+         @Query("q")searchQuery :String,
+         @Query("page")pageNumber :Int = 1,
+         @Query("apikey")apiKey :String = API_KEY):Response<NewsResponse>
 }

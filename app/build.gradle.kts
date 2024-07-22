@@ -76,9 +76,11 @@ dependencies {
 
     // Retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-moshi:2.11.0")
+    implementation ("com.squareup.okhttp3:okhttp:4.9.1")
+    implementation ("com.squareup.okhttp3:logging-interceptor:4.9.1")
+
     // Or for Gson
-    // implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     // Navigation Component
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.0")
