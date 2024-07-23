@@ -1,8 +1,12 @@
 package com.jemutai.globalgist.models
 
-data class NewsResponse(
-    val  articles :List<Article>,
+import com.google.gson.annotations.SerializedName
 
-    val status : String?,
-    val  totalResults : Int
+data class NewsResponse(
+    @SerializedName("status")
+    val status: String,
+    @SerializedName("totalResults")
+    val totalResults: Int,
+    @SerializedName("articles")
+    val articles: List<Article>
 )

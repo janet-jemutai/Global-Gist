@@ -1,11 +1,10 @@
 package com.jemutai.globalgist.models
 
+import com.google.gson.annotations.SerializedName
+
 data class Source(
-    val category: String?,
-    val country: String?,
-    val description: String?,
+    @SerializedName("id")
     val id: String?,
-    val language: String?,
-    val name: String?,
-    val url: String?
+    @SerializedName("name")
+    val name: String
 )
