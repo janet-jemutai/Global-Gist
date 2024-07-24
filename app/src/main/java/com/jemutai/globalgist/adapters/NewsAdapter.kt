@@ -1,6 +1,7 @@
 package com.jemutai.globalgist.adapters
 
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -9,7 +10,7 @@ import com.jemutai.globalgist.databinding.NewsItemBinding
 import com.jemutai.globalgist.models.Article
 
 
-class NewsAdapter(private  val articles: List<Article>,private val onMovieClick: (Article) -> Unit)
+class NewsAdapter(private  val articles: List<Article>,private var onArticleClick: (Article) -> Unit)
     :RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
 
     inner  class  ArticleViewHolder(val binding:NewsItemBinding):RecyclerView.ViewHolder(binding.root){
@@ -24,12 +25,13 @@ class NewsAdapter(private  val articles: List<Article>,private val onMovieClick:
             binding.tvtitle.text = article.title
             binding.tvarticledescription.text = article.description
             binding.root.setOnClickListener {
-//                onMovieClick(article)
+                onArticleClick(article)
             }
 
         }
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
         val binding = NewsItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
           return ArticleViewHolder(binding)
@@ -45,5 +47,9 @@ class NewsAdapter(private  val articles: List<Article>,private val onMovieClick:
 
         holder.bind(articles[position])
 
+    }
+
+    fun  setOnArticleClickListerner(listerner:(Article)->Unit){
+        onArticleClick = listerner
     }
 }

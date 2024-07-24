@@ -7,7 +7,7 @@ class Converters {
 
 
     @TypeConverters
-     fun fronSource(source:Source):String{
+     fun fromSource(source:Source):String{
          return source.name
      }
 
